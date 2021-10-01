@@ -1,0 +1,121 @@
+$textmodal: #312E2E;
+$primarybackground: #901C1C;
+
+.wrappermodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(26, 39, 156, 0.4);
+}
+
+.modal {
+    position: relative;
+    margin: 5% auto;
+    height: 550px;
+    width: 380px;
+    background-color: #DB8876;
+    border-radius: 5px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    overflow: hidden;
+
+    &--contactname {
+        margin-left: 1em;
+        font-size: 1.5em;
+        margin-bottom: -0.05em;
+        color: $textmodal;
+        font-weight: 200;
+    }
+    &--close {
+        background-color: #DB8876;
+        border: none;
+        position: absolute;
+        left: 24.3em;
+        width: 2em;
+        height: 2em;
+        color: white;
+        text-indent: -4000px;
+    }
+
+    &--close:before {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 33px;
+        width: 3px;
+        background-color: #fff;
+    }
+
+    &--close:after {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 33px;
+        width: 3px;
+        background-color: #fff;
+    }
+
+    &--close:before {
+        transform: rotate(45deg);
+    }
+
+    &--close:after {
+        transform: rotate(-45deg);
+    }
+
+    &__contact--pos {
+        margin-top: 0.5em;
+        margin-left: 1.5em; 
+    }
+
+    &__contact--textarea {
+        width: 25em;
+        height: 2em;
+        color: $textmodal;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    &__contact--textareamsg {
+        width: 25em;
+        height: 7em;
+        border: none;
+        border-radius: 5px;
+    }
+
+    &__contact--btnsubmit {
+        height: 3em;
+        width: 7em;
+        color: white;
+        background-color: $primarybackground;
+        border: none;
+        border-radius: 5px;
+        margin-top: 1.5em;
+    }
+}
+
+.labelsubmit {
+    text-indent: -3000px;
+}
+
+.messageErreur {
+    font-size: 0.9rem;
+    font-style: bold;
+    color: white;
+    background-color: red;
+  }
+
+@keyframes modalopen {
+    from {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    to {
+      opacity: 1;
+    }
+  }

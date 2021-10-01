@@ -1,0 +1,122 @@
+.lightbox {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  overflow: auto;
+  -webkit-animation: lightboxDisplay 0.5s;
+          animation: lightboxDisplay 0.5s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.lightbox.delete {
+  opacity: 0;
+}
+
+.lightbox__next, .lightbox__previous {
+  border: none;
+  background: url(/media/arrow.svg) center center/3em 10em no-repeat;
+  width: 7%;
+  height: 55%;
+  position: fixed;
+  top: 20em;
+  right: 10px;
+  margin-top: -25px;
+  z-index: 11;
+}
+
+.lightbox__previous {
+  right: auto;
+  left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.lightbox__close {
+  border: none;
+  width: 8em;
+  height: 5em;
+  background: url(/media/cross.svg) center center/45px 64px no-repeat transparent;
+  position: fixed;
+  top: 20px;
+  right: 8px;
+  z-index: 12;
+}
+
+.lightbox .buttonlightbox {
+  opacity: 0.9;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  text-indent: -4000px;
+}
+
+.lightbox .buttonlightbox:hover {
+  opacity: 1;
+}
+
+.lightbox .imglightbox {
+  height: 80%;
+  width: 75%;
+}
+
+.lightbox .title--lightbox {
+  position: fixed;
+  left: 6.4em;
+  z-index: 11;
+  bottom: 0;
+  color: #901C1C;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+@-webkit-keyframes lightboxDisplay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightboxDisplay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .lightbox {
+    width: 84%;
+    left: 0em;
+  }
+  .lightbox .title--lightbox {
+    left: 0em;
+  }
+  .lightbox__close {
+    right: 50px;
+  }
+  .lightbox__next {
+    top: 16em;
+    right: 80px;
+  }
+  .lightbox__previous {
+    top: 16em;
+    right: 80px;
+  }
+}
+/*# sourceMappingURL=lightbox.css.map */

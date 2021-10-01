@@ -1,0 +1,336 @@
+@import 'photographers';
+@import 'lightbox';
+
+$primarybackground: #901C1C;
+$primarytext: #D3573C;
+$secondarybackground: #D3573C;
+$secondarytext: #901C1C;
+$pricetext: #525252;
+$background: #FAFAFA;
+$classicblack: black;
+$textmodal: #312E2E;
+$bordertag: #C4C4C4;
+$onhover: #DB8876;
+$fonts: 'DM Sans';
+
+body {
+    min-width: 300px;
+} 
+.banner {
+    display: flex;
+    align-items: center;
+    margin-left: 9em;
+
+    &--logo {
+        margin-left: 13em;
+        margin-right: 1em;
+        width: 15em;
+    }
+
+    &--title {
+        color: $secondarytext;
+    }
+
+    &__navigation--link {
+        text-decoration: none;
+        color: $secondarytext;
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+        height: 1.3em;
+        border: solid 0.5px $bordertag;
+        border-radius: 2em;
+
+        &:hover {
+            background-color: $onhover;
+        }
+    }
+
+    &__navigation--tag {
+        text-transform: capitalize;
+        border-radius: 2em;
+    }
+}
+
+.photographers {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+
+    &--redirect {
+        height: 1.5em;
+        width: 10em;
+        border-radius: 0.5em;
+        background-color: #DB8876;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0.5em;
+        left: calc((100% - 10em) / 2);
+        font-size: 1em;
+        font-weight: bold;
+        color: black;
+        z-index: 500;
+    }
+
+    
+
+    &__line {
+    
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+    
+        &--profile {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 6em;
+        }
+        &--profilelink {
+            text-decoration: none;
+            border-radius: 50%;
+            width: 400px;
+        }
+        
+        &--pictures {
+            height: 10em;
+            width: 10em;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    
+        &--name {
+            margin-bottom: 0em;
+            color: $primarytext;
+            font-family: $fonts;
+            font-weight: 400;
+        }
+    
+        &--location {
+            color: $secondarytext;
+        }
+    
+        &--skills {
+            color: $classicblack;
+        }
+    
+        &--price {
+            color: $pricetext;
+        }
+    }
+}
+
+.margin--details {
+    margin-bottom: 0em;
+}
+
+.photographerstag {
+    margin-top: 0.5em;
+    &__link {
+        text-transform: capitalize;
+        text-decoration: none;
+        color: $secondarytext;
+        margin-right: 1em;
+        width: 5em;
+        border: solid 0.5px $bordertag;
+        border-radius: 2em;
+        &:hover {
+            background-color: $onhover;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        padding: 0em;
+    }
+    .photographers__line {
+        display: flex;
+        justify-content: center;
+
+        &--profile {
+            text-align: center;
+        }
+    }
+
+    .photographers--redirect {
+        display: none;
+    }
+
+    .banner {
+
+        &__navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 3em;
+            order: 3;               
+        }
+
+        &--logo {
+            position: absolute;
+            top: 0.5em;
+            left: 0em;
+            width: 35%;
+            margin-left: 1.5em;
+        }
+        &--title {
+            position: absolute;
+            top: 0em;
+            right: 1.5em;
+            font-size: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .banner__navigation {
+        position: absolute;
+        top: 9em;
+    }
+
+    .banner--logo {
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 881px) {
+    .photographers__line {
+        justify-content: center;
+    }
+
+    .banner {
+        flex-wrap: wrap;
+        margin-left: 5em;
+    }
+
+    .banner__navigation {
+        position: absolute;
+        top: 9em;
+        left: 7em;
+    }
+
+    .banner--logo {
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 696px) {
+
+    .banner {
+        flex-wrap: wrap;
+        margin-left: 1em;
+    }
+
+    .banner__navigation {
+        position: absolute;
+        top: 9em;
+        left: 7em;
+    }
+
+    .banner--logo {
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 624px) {
+
+    .banner {
+        flex-wrap: wrap;
+        margin-left: 0em;
+    }
+
+    .banner__navigation {
+        position: absolute;
+        top: 9em;
+        left: 2em;
+    }
+
+    .banner--logo {
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 616px) {
+
+    .banner {
+        flex-wrap: wrap;
+        margin-left: -1em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .banner {
+        flex-wrap: wrap;
+        margin-left: -2em;
+    }
+
+    .banner__navigation {
+        left: 0.5em;
+    }
+
+    .banner--logo {
+        width: 10em;
+    }
+}
+
+@media screen and (max-width: 504px) {
+
+    .banner--logo {
+        width: 8em;
+    }
+}
+
+@media screen and (max-width: 471px) {
+
+    .banner--logo {
+        width: 5em;
+    }
+
+    .banner__navigation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 424px) {
+
+    .banner--logo {
+        width: 5em;
+    }
+
+    .banner--title {
+        font-size: 1.3em;
+    }
+
+    .banner__navigation {
+        top: 6em;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .banner__navigation {
+        position: relative;
+        top: 0;
+        left: 2em;
+    }
+
+    .banner--title {
+        top: -0.3em;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .banner--title {
+        right: -1.5em;
+    }
+
+    .banner {
+        margin-left: 0;
+    }
+}

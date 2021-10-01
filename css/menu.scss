@@ -1,0 +1,36 @@
+$primarybackground: #901C1C;
+$primarytext: #D3573C;
+$secondarybackground: #D3573C;
+$secondarytext: #901C1C;
+$pricetext: #525252;
+$background: #FAFAFA;
+$classicblack: black;
+$textmodal: #312E2E;
+$bordertag: #C4C4C4;
+$onhover: #DB8876;
+$fonts: 'DM Sans';
+
+*{
+    padding: 0em;
+}
+.menu {
+    font-family: $fonts;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.menu__nav {
+    font-family: $fonts;
+    font-weight: 700;
+    margin-left: 2em;
+    width: 10em;
+    height: 3em;
+    background-color: $primarybackground;
+    border-radius: 0.3em;
+    color: white;
+}
+
+.banner__photographers {
+    margin-left: 5em;
+}

@@ -1,0 +1,345 @@
+@import 'menu';
+@import 'modal';
+$primarybackground: #901C1C;
+$primarytext: #D3573C;
+$secondarybackground: #D3573C;
+$secondarytext: #901C1C;
+$pricetext: #525252;
+$background: #FAFAFA;
+$classicblack: black;
+$textmodal: #312E2E;
+$bordertag: #C4C4C4;
+$fonts : 'DM Sans';
+
+body {
+    min-width: 300px;
+    padding: 2em;
+}
+
+main {
+    margin: auto;
+    min-width: 300px;
+}
+
+.width {
+    max-width: 1280px;
+}
+
+.fontstyle {
+    font-family: $fonts;
+}
+
+.fontweight4 {
+    font-weight: 400;
+}
+
+.photographers__banner {
+    position: relative;
+    min-width: 300px;
+    height: 22em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $background;
+}
+
+.photographers__details {
+    padding-left: 1em;
+
+    &--name {
+        height: 1em;
+        color: $primarytext;
+        font-size: 64px;
+    }
+
+    &--location {
+        color: $secondarytext;
+        font-size: 24px;
+    }
+
+    &--skills {
+        color: $pricetext;
+        font-size: 18px;
+    }
+}
+
+.photographers__nav {
+    position: absolute;
+    top: 14em;
+    left: 1em;
+    font-size: 18px;
+    min-width: 300px;
+
+    &--link {
+        text-decoration: none;
+        color: $secondarytext;
+        margin-right: 1em;
+        border: solid 0.5px $bordertag;
+        border-radius: 2em;
+    }
+
+    &--tag {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        font-size: 18px;
+    }
+}
+
+.photographers__button {
+    cursor: pointer;
+    padding-top: 2em;
+
+    &--submit {
+        height: 3.5em;
+        width: 10em;
+        color: white;
+        background-color: $primarybackground;
+        border: none;
+        border-radius: 5px;
+        margin-top: 1em;
+        font-weight: 700;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+.photographers__picture {
+
+    padding-top: 1.2em;
+
+    &--size {
+        height: 15em;
+        width: 15em;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 1em;
+        margin-right: 4em;
+    }
+}
+
+.content {
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1em;
+
+    &__vignettes {
+        width: 26%;
+    
+        &--pictures {
+            object-fit: cover;
+            height: 18em;
+            width: 100%;
+            border-radius: 0.2em;
+        }
+    }
+
+    &__describe {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -1.2em;
+        
+        &--text {
+            font-family: $fonts;
+            font-weight: 400;
+            font-size: 1.4em;
+            color: $secondarytext;
+            
+        }
+
+        &--price {
+            font-family: $fonts;
+            margin-top: -0.2em;
+            font-weight: 400;
+            font-size: 1em;
+            margin-top: -0.5em;
+            color: $secondarytext;
+        }
+
+        &--button {
+            height: 100%;
+            background-color: white;
+            border: none;
+            color: $secondarytext;
+            font-weight: 500;
+            font-family: $fonts;
+        }
+    }
+}
+
+.countlikes {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 4em;
+    width: 20em;
+    background-color: #DB8876;
+    border-radius: 0.5em 0.5em 0 0;
+
+    &--text {
+        font-family: $fonts;
+        font-weight: 500;
+        font-size: 1.3em;
+    }
+}
+
+.labelsubmit {
+    text-indent: -4000px;
+}
+
+
+/* Début reponsive */ 
+
+@media screen and (max-width: 975px) {
+    .content__vignettes {
+        width: 40%
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .photographers__details--name {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .photographers__banner {
+        background-color: white;
+        height: unset;
+        width: unset;
+        margin-top: 0em;
+        display: block;
+    }
+
+    .photographers__details {
+        padding-left: 0em;
+        margin-bottom: 4em;
+    }
+
+    .photographers__button {
+        position: fixed;
+        z-index: 500;
+        top: 50em;
+        width: 50%;
+        border-radius: 1em;
+        left: 20%;
+        
+        &--submit {
+            height: 2.5em;
+        }
+    }
+
+    .photographers__picture {
+        position: absolute;
+        top: 0em;
+        right: -2em;
+        padding-top: 0;
+        &--size {
+            height: 8em;
+            width: 8em;
+        }
+    }
+
+    .photographers__nav {
+        top: 10em;
+        left: 0em;
+    }
+
+    .content__vignettes {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .countlikes {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .menu {
+        display: none;
+    }
+    .photographers__banner {
+        background-color: white;
+        height: unset;
+        width: unset;
+        margin-top: 4em;
+        display: block;
+    }
+    
+    .content {
+        width: 22.5em;
+        flex-direction: column;
+
+        &__vignettes {
+            width: 100%;
+        }
+    }
+
+    .photographers__nav {
+        width: 100%;
+        position: relative;
+        top: 0em;
+        right: 0em;
+        margin-bottom: 2em;
+
+        &--tag {
+            font-size: 15px;
+        }
+    }
+
+    .photographers__button {
+        position: fixed;
+        z-index: 500;
+        top: 69%;
+        width: 50%;
+        border-radius: 1em;
+        left: 20%;
+        
+        &--submit {
+            height: 2.5em;
+        }
+    }
+
+    .photographers__details {
+        &--name {
+            font-size: 30px;
+        }
+    }
+
+    .photographers__picture {
+        position: absolute;
+        top: 0em;
+        right: -5em;
+        padding-top: 0;
+        &--size {
+            height: 6em;
+            width: 6em;
+        }
+    }
+
+    .countlikes {
+        display: none;
+    }
+
+    .wrappermodal {
+        position: initial;
+        overflow: initial;
+    }
+
+    .modal {
+        height: 460px;
+        left: -0.8em;
+        right: 0;
+        z-index: 600;
+    }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="media/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="images/logo.ico"/>
+            
+    <title>Fisheye</title>
+</head>
+
+<body>
+
+    <header class="banner__photographers">
+        <a class="banner--link" href="index.html" title="Logo Fisheye et lien vers la page d'accueil">
+            <img class="banner--logo" src="media/logo_fisheye.png" alt="image du logo fisheye">
+        </a>
+    </header>
+
+    <main id ="deleteall" class="width">
+        <section class="photographers__banner" id ="photographers_banner">
+            
+            <div class ="photographers__button">
+                <input
+                    class="photographers__button--submit fontstyle"
+                    type="submit"
+                    id="btncontact"
+                    value="Contactez-moi"
+                />
+            </div>
+
+        </section>
+
+            <nav class = "menu" aria-label ="menu de tri">
+                <label for="menufilter">Trier par</label>
+                <select name="options" class="menu__nav" id ="menufilter">
+                    <option value ="Popularité" class="menu__nav--text">Popularité</option>
+                    <option value ="Titre" class="menu__nav--text">Titre</option>
+                    <option value ="Date" class="menu__nav--text">Date</option>
+                </select>
+            </nav>
+
+
+        
+        <div class ="wrappermodal">
+            <div class="modal">
+                <button id="close" class="modal--close" tabindex="0">x</button>
+                <h2 class="modal--contactname">Contactez-moi <br></h2>
+                <form 
+                    method="post"
+                    name="contact"
+                    id="formulaire"
+                    class="modal__contact"
+                >
+
+                <div class="modal__contact--firstname modal__contact--pos">
+                    <label for="first">Prénom</label><br>
+                    <input
+                        class="modal__contact--textarea"
+                        type="text"
+                        id="first"
+                        name="first"
+                        >
+                        <span id="messageErreurPrenom" class="messageErreur"></span>
+                </div>
+
+                <div class="modal__contact--lastname modal__contact--pos">
+                    <label for="last">Nom</label><br>
+                    <input
+                        class="modal__contact--textarea"
+                        type="text"
+                        id="last"
+                        name="last"
+                    >
+                    <span id="messageErreurNom" class="messageErreur"></span>
+                </div>
+
+                <div class="modal__contact--email modal__contact--pos">
+                    <label for="email">Email</label><br>
+                    <input
+                        class="modal__contact--textarea"
+                        type="email"
+                        id="email"
+                        name="email"
+                    >
+                    <span id="messageErreurMail" class="messageErreur"></span>
+                </div>
+
+                <div class="modal__contact--message modal__contact--pos">
+                    <label for="message">Votre message</label><br>
+                    <input
+                        class="modal__contact--textareamsg"
+                        type="text"
+                        id="message"
+                        name="message"
+                    >
+                    <span id="messageErreurMessage" class="messageErreur"></span>
+                </div>
+                
+                <div class ="modal__contact--btn modal__contact--pos">
+                    <input
+                        class="modal__contact--btnsubmit"
+                        type="submit"
+                        id="btnsubmit"
+                        value="Envoyer"
+                        aria-label="bouton envoyer"
+                    />
+                </div>
+
+            </form>  
+            </div>
+        </div>
+        <div class="content" id = "content"></div>
+    
+        
+        <div class = "countlikes" id = "countandprice">
+            <p class = "countlikes--text" id = "totallikes"></p>
+            <p class = "countlikes--text" id = "price"></p>
+        </div>
+
+        <div class="lightbox">
+            <button id="closelight" class="lightbox__close buttonlightbox">close</button>
+            <button id="nextelement" class="lightbox__next buttonlightbox">next</button>
+            <button id="previouselement" class="lightbox__previous buttonlightbox">previous</button>
+        </div>
+    </main>
+
+    <script type="module" src="./js/photographerpage.class.js"></script>
+</body>
+</html>
